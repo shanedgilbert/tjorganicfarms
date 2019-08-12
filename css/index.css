@@ -240,6 +240,9 @@ Extra (xl) large devices (large desktops, 1200px and up)
   }
 }
 @media (max-width: 576px) {
+  .para-title h1 {
+    padding-top: 35vh;
+  }
   .para-title h1, .para-caption h1 {
     font-size: 250%;
   }
