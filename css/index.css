@@ -16,6 +16,9 @@ html, body {
 .navbar {
   padding: .5rem;
   background-color: #212121;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 .navbar-nav li {
   padding-right: 20px;
@@ -30,10 +33,10 @@ html, body {
 .nav-color:hover {
   color: white !important;
 }
-.parallax1,
-.parallax2,
-.parallax3,
-.parallax4 {
+.my-logo {
+  padding-left: 20px;
+}
+.parallax1 {
   height: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -44,35 +47,19 @@ html, body {
 .parallax1 {
   background-image: url('../img/bg1.jpg');
 }
-/*Background 2*/
-.parallax2 {
-  background-image: url('../img/bg2.jpg');
-}
-/*Background 3*/
-.parallax3 {
-  background-image: url('../img/bg3.jpg');
-}
-/*Background 4*/
-.parallax4 {
-  background-image: url('../img/bg4.jpg');
-}
-.para-caption {
-  display: block;
-  position: absolute;
-}
 .para-title {
   font-family: 'Raleway';
   color: white;
   text-shadow: 2px 2px 15px #000;
-}
-.para-title h1 {
   font-size: 500%;
   padding-top: 80vh;
   animation-name: title-drop;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
-.para-caption h1 {
+.para-caption {
+  display: block;
+  position: absolute;
   font-size: 500%;
   color: white;
   text-shadow: 1px 1px 15px #000;
@@ -80,7 +67,7 @@ html, body {
   position: static;
   padding-top: 45vh;
 }
-.para-title h1, .para-caption h1 {
+.para-title, .para-caption {
   font-style: italic;
 }
 @keyframes title-drop {
@@ -93,65 +80,37 @@ html, body {
     opacity: 1;
   }
 }
-.lightbox-img a img {
-  height: 65vh;
-  width: 100%;
-  border-radius: 1.5%;
-}
-.lightbox-img a img:hover {
-  animation-name: img-hover;
-  animation-duration: .1s;
-  animation-fill-mode: forwards;
-}
-@keyframes img-hover {
-  from{box-shadow: 0px 0px 0px #000}
-  to {box-shadow: 0px 0px 15px #000}
-}
-.lightbox-text h1 {
+.main-text {
   padding-bottom: 3rem;
 }
-.lightbox-text p, .contact-text {
+.main-text > p {
   font-size: 150%;
   padding-left: 15rem;
   padding-right: 15rem;
   padding-bottom: 3rem;
 }
-.contact {
-  background-color: #212121;
-  padding-bottom: 1rem;
+.scroll-top, .scroll-bot {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 50%;
+  padding: .25em;
+  width: 80px;
+  height: 80px;
 }
-.contact-text {
-  padding: 3rem 5rem 3rem 5rem;
+.show {
+  visibility: visible;
+  opacity: 1;
 }
-.contact-text p {
-  color: white;
-  width: 100%;
-  font-family: 'Montserrat', 'Roboto';
-  font-weight: 600;
-}
-.contact h5 {
-  color: white;
-  padding-bottom: 1rem;
-  margin: 0;
-}
-hr {
-  border-top: 1.5px solid #424242;
-  width: 91%;
-}
-.div-hr {
-  padding-top: 3rem;
-}
-.social {
-  text-align: center !important;
-}
-.social a {
-  font-size: 6rem;
-}
-.fa-facebook {
-  color: #3b5998;
-}
-.fa-facebook:hover {
-  color: #d5d5d5;
+.hide {
+  visibility: hidden;
+  opacity: 0;
 }
 
 /*---Media Queries --*/
@@ -183,10 +142,10 @@ Extra (xl) large devices (large desktops, 1200px and up)
   .parallax4 {
     background-attachment: scroll;
   }
-  .lightbox-img a img {
+  .lightbox-img{
     margin-bottom: 2rem;
   }
-  .lightbox-text p {
+  .lightbox-text {
     font-size: 200%;
     padding-left: 0rem;
     padding-right: 0rem;
@@ -207,28 +166,32 @@ Extra (xl) large devices (large desktops, 1200px and up)
     background-attachment: scroll;
     height: 50%;
   }
-  .para-title h1, .para-caption h1 {
+  @keyframes img-hover {
+    from{box-shadow: 0px 0px 0px #000}
+    to {box-shadow: 0px 0px 0px #000}
+  }
+  .para-title, .para-caption {
     font-size: 350%;
   }
-  .para-title h1 {
-    padding-top: 40vh;
+  .para-title {
+    padding-top: 35vh;
   }
-  .para-caption h1 {
+  .para-caption {
     padding-top: 6vh;
   }
-  .lightbox-text h1 {
+  .lightbox-text {
     font-size: 150%;
   }
-  .lightbox-text p {
+  .lightbox-text > p {
     font-size: 150%;
     padding-left: 0rem;
     padding-right: 0rem;
     padding-bottom: 2rem;
   }
-  .lightbox-img a img {
+  .lightbox-img {
     height: 100%;
   }
-  .contact-text p {
+  .contact-text {
     font-size: 80%;
     word-wrap: break-word;
   }
@@ -240,17 +203,20 @@ Extra (xl) large devices (large desktops, 1200px and up)
   }
 }
 @media (max-width: 576px) {
-  .para-title h1 {
+  .para-title {
     padding-top: 35vh;
   }
-  .para-title h1, .para-caption h1 {
+  .para-caption {
+    padding-top: 15vh;
+  }
+  .para-title , .para-caption {
     font-size: 250%;
   }
-  .lightbox-text h1 {
+  .lightbox-text {
     font-size: 125%;
     padding-bottom: 1rem;
   }
-  .lightbox-text p {
+  .lightbox-text > p {
     font-size: 125%;
     padding-bottom: 1rem;
   }

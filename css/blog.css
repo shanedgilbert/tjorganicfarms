@@ -1,0 +1,91 @@
+html, body {
+  scroll-behavior: smooth;
+  font-family: 'Raleway',"Helvetica Neue",sans-serif;
+  height: 100%
+}
+.container-fluid {
+  padding: 0 !important;
+}
+.jumbotron {
+  margin: 0 !important;
+  padding-bottom: 6rem !important;
+}
+.row {
+  margin: 0 !important;
+}
+.navbar {
+  padding: .5rem;
+  background-color: #212121;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.2em !important;
+  font-weight: 550;
+}
+.nav-color, .logo-name {
+  color: #d9d9d9 !important;
+}
+.nav-color:hover {
+  color: white !important;
+}
+.my-logo {
+  padding-left: 20px;
+}
+.title {
+  padding-top: 15vh;
+}
+.title > hr {
+  width: 25vw;
+  border: 1px solid black;
+}
+.scroll-top, .scroll-bot {
+  transition: all .25s ease-in-out;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em 3em 0;
+  border-radius: 50%;
+  padding: .25em;
+  width: 80px;
+  height: 80px;
+}
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*---Media Queries --*/
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+@media (max-width: 992px) {}
+@media (max-width: 768px) {}
+@media (max-width: 576px) {}

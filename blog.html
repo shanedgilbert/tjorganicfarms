@@ -2,7 +2,7 @@
 <HTML>
   <html lang="en">
   <head>
-  	<title>TJ Organic Farms</title>
+  	<title>TJ Farms - Blog</title>
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/blog.css">
     <script type="text/javascript" src="js/index.js"></script>
   </head>
 
@@ -23,7 +23,7 @@
   <!--Navbar-->
   <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand my-logo" href="">TJ FARMS</a>
+      <a class="navbar-brand my-logo" href="index.html">TJ FARMS</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -36,7 +36,7 @@
 						<a class="nav-link nav-color" href="product.html">Products</a>
 					</li>
           <li class="nav-item">
-						<a class="nav-link nav-color" href="blog.html">Blog</a>
+						<a class="nav-link nav-color" href="">Blog</a>
 					</li>
 				</ul>
 			</div>
@@ -44,18 +44,9 @@
   </nav>
 
 <!--main content-->
-<div class="parallax1" id="tj-farms">
-  <div class="col-12 mx-auto text-center">
-    <h2 class="para-title">TJ有機農場</h2>
-  </div>
-</div>
-
-<div class="container-fluid justify-content-center" id="content">
-  <div class="row jumbotron">
-    <div class="col-12 mx-auto text-center">
-      <h2 class="main-text">Who we are and what we do</h2>
-    </div>
-  </div>
+<div class="col-12 title mx-auto text-center">
+  <h1>Blog/Updates</h1>
+  <hr>
 </div>
 
 <a class="scroll-top hide" id="scroll-to-top">
@@ -65,5 +56,12 @@
   <i class="fas fa-chevron-down fa-3x"></i>
 </a>
 
+<!--Lightbox Script-->
+<script>
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+</script>
 </body>
 </html>
