@@ -1,0 +1,260 @@
+html, body {
+  scroll-behavior: smooth;
+  font-family: 'Raleway',"Helvetica Neue",sans-serif;
+  height: 100%
+}
+.container-fluid {
+  padding: 0 !important;
+}
+.jumbotron {
+  margin: 0 !important;
+  padding-bottom: 6rem !important;
+}
+.row {
+  margin: 0 !important;
+}
+.navbar {
+  padding: .5rem;
+  background-color: #212121;
+}
+.navbar-nav li {
+  padding-right: 20px;
+}
+.nav-link {
+  font-size: 1.2em !important;
+  font-weight: 550;
+}
+.nav-color, .logo-name {
+  color: #d9d9d9 !important;
+}
+.nav-color:hover {
+  color: white !important;
+}
+.parallax1,
+.parallax2,
+.parallax3,
+.parallax4 {
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Background 1*/
+.parallax1 {
+  background-image: url('../img/bg1.jpg');
+}
+/*Background 2*/
+.parallax2 {
+  background-image: url('../img/bg2.jpg');
+}
+/*Background 3*/
+.parallax3 {
+  background-image: url('../img/bg3.jpg');
+}
+/*Background 4*/
+.parallax4 {
+  background-image: url('../img/bg4.jpg');
+}
+.para-title {
+  font-family: 'Raleway';
+  color: white;
+  text-shadow: 2px 2px 15px #000;
+  font-size: 500%;
+  padding-top: 80vh;
+  animation-name: title-drop;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.para-caption {
+  display: block;
+  position: absolute;
+  font-size: 500%;
+  color: white;
+  text-shadow: 1px 1px 15px #000;
+  font-family: 'Raleway';
+  position: static;
+  padding-top: 45vh;
+}
+.para-title, .para-caption {
+  font-style: italic;
+}
+@keyframes title-drop {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.lightbox-img {
+  height: 65vh;
+  width: 100%;
+  border-radius: 1.5%;
+}
+.lightbox-img:hover {
+  animation-name: img-hover;
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+}
+@keyframes img-hover {
+  from{box-shadow: 0px 0px 0px #000}
+  to {box-shadow: 0px 0px 15px #000}
+}
+.lightbox-text {
+  padding-bottom: 3rem;
+}
+.lightbox-text > p, .contact-text {
+  font-size: 150%;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-bottom: 3rem;
+}
+.contact {
+  background-color: #212121;
+  padding-bottom: 1rem;
+}
+.contact-text {
+  padding: 3rem 5rem 3rem 5rem;
+}
+.contact-text > p {
+  color: white;
+  width: 100%;
+  font-family: 'Montserrat', 'Roboto';
+  font-weight: 600;
+}
+.contact > h5 {
+  color: white;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+hr {
+  border-top: 1.5px solid #424242;
+  width: 91%;
+}
+.div-hr {
+  padding-top: 3rem;
+}
+.social {
+  text-align: center !important;
+}
+.social a {
+  font-size: 6rem;
+}
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-facebook:hover {
+  color: #d5d5d5;
+}
+
+/*---Media Queries --*/
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+@media (max-width: 992px) {
+  .jumbotron {
+    padding-bottom: 2rem !important;
+  }
+  .parallax1,
+  .parallax2,
+  .parallax3,
+  .parallax4 {
+    background-attachment: scroll;
+  }
+  .lightbox-img{
+    margin-bottom: 2rem;
+  }
+  .lightbox-text {
+    font-size: 200%;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 2rem;
+  }
+  .contact-text {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .contact-text p {
+    font-size: 150%;
+  }
+}
+@media (max-width: 768px) {
+  .parallax1,
+  .parallax2,
+  .parallax3,
+  .parallax4 {
+    background-attachment: scroll;
+    height: 50%;
+  }
+  @keyframes img-hover {
+    from{box-shadow: 0px 0px 0px #000}
+    to {box-shadow: 0px 0px 0px #000}
+  }
+  .para-title, .para-caption {
+    font-size: 350%;
+  }
+  .para-title {
+    padding-top: 35vh;
+  }
+  .para-caption {
+    padding-top: 6vh;
+  }
+  .lightbox-text {
+    font-size: 150%;
+  }
+  .lightbox-text > p {
+    font-size: 150%;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 2rem;
+  }
+  .lightbox-img {
+    height: 100%;
+  }
+  .contact-text {
+    font-size: 80%;
+    word-wrap: break-word;
+  }
+  .responsive-row {
+    padding-bottom: 1rem;
+  }
+  .social a {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 576px) {
+  .para-title {
+    padding-top: 35vh;
+  }
+  .para-caption {
+    padding-top: 15vh;
+  }
+  .para-title , .para-caption {
+    font-size: 250%;
+  }
+  .lightbox-text {
+    font-size: 125%;
+    padding-bottom: 1rem;
+  }
+  .lightbox-text > p {
+    font-size: 125%;
+    padding-bottom: 1rem;
+  }
+}
