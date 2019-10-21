@@ -177,10 +177,7 @@ Extra (xl) large devices (large desktops, 1200px and up)
   }
 }
 @media (max-width: 992px) {
-  a:not([href]):not([tabindex]) {
-    visibility: hidden;
-  }
-  .show {
+  .showArrow {
     visibility: hidden;
   }
   .text-divs-right {
@@ -194,5 +191,9 @@ Extra (xl) large devices (large desktops, 1200px and up)
     text-align: left;
   }
 }
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    text-align: end;
+  }
+}
 @media (max-width: 576px) {}

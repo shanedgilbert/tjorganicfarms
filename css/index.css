@@ -134,14 +134,14 @@ Extra (xl) large devices (large desktops, 1200px and up)
 @media (max-width: 992px) {
   .showArrow {
     visibility: hidden;
+    }
+  .para-title {
+    padding-top: 12vh;
   }
-}
-.para-title {
-  padding-top: 12vh;
-}
-.main-text > p {
-  padding-left: 0;
-  padding-right: 0;
+  .main-text > p {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media (max-width: 768px) {
   .para-title {
