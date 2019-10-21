@@ -10,9 +10,9 @@ window.onload = function() {
 
     // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
     if (y > 200) {
-      scrollToTopButton.className = "scroll-top show";
+      scrollToTopButton.className = "scroll-top showArrow";
     } else {
-      scrollToTopButton.className = "scroll-top hide";
+      scrollToTopButton.className = "scroll-top hideArrow";
     }
   };
 
@@ -23,9 +23,9 @@ window.onload = function() {
 
     // If the scroll value is greater than the window height, let's add a class to the scroll-to-top button to show it!
     if (y <= 200) {
-      scrollToBottomButton.className = "scroll-bot show";
+      scrollToBottomButton.className = "scroll-bot showArrow";
     } else {
-      scrollToBottomButton.className = "scroll-bot hide";
+      scrollToBottomButton.className = "scroll-bot hideArrow";
     }
   };
   window.addEventListener("scroll", scrollFuncTop);

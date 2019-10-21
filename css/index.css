@@ -36,7 +36,7 @@ html, body {
   color: white !important;
 }
 .my-logo {
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .parallax1 {
   height: 100%;
@@ -103,11 +103,11 @@ html, body {
   width: 80px;
   height: 80px;
 }
-.show {
+.showArrow {
   visibility: visible;
   opacity: 1;
 }
-.hide {
+.hideArrow {
   visibility: hidden;
   opacity: 0;
 }
@@ -132,91 +132,23 @@ Extra (xl) large devices (large desktops, 1200px and up)
 */
 
 @media (max-width: 992px) {
-  .jumbotron {
-    padding-bottom: 2rem !important;
+  .showArrow {
+    visibility: hidden;
   }
-  .parallax1,
-  .parallax2,
-  .parallax3,
-  .parallax4 {
-    background-attachment: scroll;
-  }
-  .lightbox-img{
-    margin-bottom: 2rem;
-  }
-  .lightbox-text {
-    font-size: 200%;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 2rem;
-  }
-  .contact-text {
-    padding: 1rem 2rem 1rem 2rem;
-  }
-  .contact-text p {
-    font-size: 150%;
-  }
+}
+.para-title {
+  padding-top: 12vh;
+}
+.main-text > p {
+  padding-left: 0;
+  padding-right: 0;
 }
 @media (max-width: 768px) {
-  .parallax1,
-  .parallax2,
-  .parallax3,
-  .parallax4 {
-    background-attachment: scroll;
-    height: 50%;
-  }
-  @keyframes img-hover {
-    from{box-shadow: 0px 0px 0px #000}
-    to {box-shadow: 0px 0px 0px #000}
-  }
-  .para-title, .para-caption {
-    font-size: 350%;
-  }
   .para-title {
-    padding-top: 35vh;
+    font-size: 300%;
   }
-  .para-caption {
-    padding-top: 6vh;
-  }
-  .lightbox-text {
-    font-size: 150%;
-  }
-  .lightbox-text > p {
-    font-size: 150%;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 2rem;
-  }
-  .lightbox-img {
-    height: 100%;
-  }
-  .contact-text {
-    font-size: 80%;
-    word-wrap: break-word;
-  }
-  .responsive-row {
-    padding-bottom: 1rem;
-  }
-  .social a {
-    font-size: 4rem;
+  .navbar-nav .nav-link {
+    text-align: end;
   }
 }
-@media (max-width: 576px) {
-  .para-title {
-    padding-top: 35vh;
-  }
-  .para-caption {
-    padding-top: 15vh;
-  }
-  .para-title , .para-caption {
-    font-size: 250%;
-  }
-  .lightbox-text {
-    font-size: 125%;
-    padding-bottom: 1rem;
-  }
-  .lightbox-text > p {
-    font-size: 125%;
-    padding-bottom: 1rem;
-  }
-}
+@media (max-width: 576px) {}

@@ -88,6 +88,9 @@ html, body {
   display: flex;
   align-items: center;
 }
+.text-divs-right {
+  text-align: right;
+}
 .text-divs > p {
   font-size: 150%;
   padding-left: 10rem;
@@ -118,11 +121,11 @@ html, body {
   width: 80px;
   height: 80px;
 }
-.show {
+.showArrow {
   visibility: visible;
   opacity: 1;
 }
-.hide {
+.hideArrow {
   visibility: hidden;
   opacity: 0;
 }
@@ -147,6 +150,10 @@ Extra (xl) large devices (large desktops, 1200px and up)
 */
 
 @media (max-width: 1500px) {
+  .col-lg-6 {
+    flex: 0 0 67%;
+    max-width: 100%;
+  }
   .lightbox-img {
     height: auto;
   }
@@ -175,6 +182,16 @@ Extra (xl) large devices (large desktops, 1200px and up)
   }
   .show {
     visibility: hidden;
+  }
+  .text-divs-right {
+    margin: 0;
+    padding: 2rem;
+  }
+  .col-lg-6 {
+    flex: none;
+  }
+  .text-divs-right {
+    text-align: left;
   }
 }
 @media (max-width: 768px) {}
